@@ -73,4 +73,19 @@ public class searchAndSort {
 
         }
     }
+    
+    public static int[] selection_sort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            int min = i;
+            for (int x = 1 + i; x < arr.length; x++) {
+                if (arr[min] > arr[x]) {
+                    min = x;
+                }
+            }
+            int z = arr[min];
+            arr[min] = arr[i];
+            arr[i] = z;
+        }
+        return arr;
+    }
 }
