@@ -88,4 +88,16 @@ public class searchAndSort {
         }
         return arr;
     }
+    
+    public static void insertionSort(int[] larik) {
+        for (int iterasi = 1; iterasi < larik.length - 1; iterasi++) {
+            int elemen = iterasi;
+            int sisip = larik[iterasi];
+            while ((elemen >= 1) && (sisip < larik[elemen - 1])) {
+                larik[elemen] = larik[elemen - 1];
+                elemen--;
+            }
+            larik[elemen] = sisip;
+        }
+    }
 }
