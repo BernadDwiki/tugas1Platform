@@ -59,4 +59,18 @@ public class searchAndSort {
         }
         return -1;
     }
+    
+    public static void bubleSort(int larik[]) {
+        for (int iterasi = 1; iterasi <= larik.length - 1; iterasi++) {
+            for (int elemen = 0; elemen <= larik.length - 1 - iterasi; elemen++) {
+                if (larik[elemen] > larik[elemen + 1]) {
+                    int temp = larik[elemen];
+                    larik[elemen] = larik[elemen + 1];
+                    larik[elemen + 1] = temp;
+                }
+
+            }
+
+        }
+    }
 }
